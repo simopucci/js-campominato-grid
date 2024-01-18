@@ -20,7 +20,7 @@ footer {
     border: 2px solid white;    
 }
 
-.box {
+.box-100 {
     width: calc(100% / 10);
     height: calc(100% / 10);
 
@@ -34,6 +34,37 @@ footer {
     cursor: pointer;
 }
 
-.box.clicked {
+.box-100.clicked,
+.box-81.clicked,
+.box-49.clicked {
     background-color: burlywood;
+    color: black;
+}
+
+.box-81 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+
+    border: 2px solid white;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.box-49 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+
+    border: 2px solid white;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 }

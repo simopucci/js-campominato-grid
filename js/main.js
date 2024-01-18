@@ -1,5 +1,6 @@
 // # FUNCTIONS
 
+// # Facile
 function gameGrid(container) {
     container.innerHTML = '';
 

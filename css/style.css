@@ -1,0 +1,39 @@
+header {
+    max-height: 100px;
+}
+
+.wrapper {
+    height: calc(100vh - 100px - 70px);
+    background-color: rgb(27, 57, 77);
+}
+
+footer {
+    height: 70px;
+    line-height: 70px;
+}
+
+.box-container {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+
+    border: 2px solid white;    
+}
+
+.box {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+    border: 2px solid white;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.box.clicked {
+    background-color: burlywood;
+}

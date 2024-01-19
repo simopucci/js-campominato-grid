@@ -10,8 +10,10 @@ function generateBombList(bombs, numberOfCell) {
             randomBombs.push(number);
         }
     }
+    console.log(randomBombs);
     return randomBombs;
 }
+
 
 // # Facile
 function gameGrid(container) {
@@ -36,12 +38,17 @@ function gameBox(text) {
             if (!genBombs100.includes(text)) {
                 box.classList.toggle('clicked');
                 console.log(box.innerText);
+                points += 1;
+                if (points == 100 - 16) {
+                    console.log('Hai Vinto!');
+                    isGameOver = true;
+                }
             } else {
                 box.classList.toggle('failed');
                 console.log('Game Over');
                 isGameOver = true;
+                console.log('Il tuo punteggio è: ' + points);
             }
-
         }
 
     })
@@ -70,10 +77,16 @@ function gameBox81(text) {
             if (!genBombs81.includes(text)) {
                 box.classList.toggle('clicked');
                 console.log(box.innerText);
+                points += 1;
+                if (points == 81 - 16) {
+                    console.log('Hai Vinto!');
+                    isGameOver = true;
+                }
             } else {
                 box.classList.toggle('failed');
                 console.log('Game Over');
                 isGameOver = true;
+                console.log('Il tuo punteggio è: ' + points);
             }
 
         }
@@ -103,10 +116,16 @@ function gameBox49(text) {
             if (!genBombs49.includes(text)) {
                 box.classList.toggle('clicked');
                 console.log(box.innerText);
+                points += 1;
+                if (points == 49 - 16) {
+                    console.log('Hai Vinto!');
+                    isGameOver = true;
+                }
             } else {
                 box.classList.toggle('failed');
                 console.log('Game Over');
                 isGameOver = true;
+                console.log('Il tuo punteggio è: ' + points);
             }
 
         }
@@ -127,9 +146,11 @@ const genBombs49 = generateBombList(16, 49);
 const genBombs81 = generateBombList(16, 81);
 const genBombs100 = generateBombList(16, 100);
 let isGameOver = false;
+let points = 0;
 
 playButton.addEventListener('click', function() {
     isGameOver = false;
+    points = 0;
 
     if (difficultValue.value == 'facile') {
         gameGrid(gameBoard);

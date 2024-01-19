@@ -34,14 +34,14 @@ footer {
     cursor: pointer;
 }
 
-.box-100.clicked
-/* .box-81.clicked, */
-/* .box-49.clicked  */ {
+.box-100.clicked,
+.box-81.clicked,
+.box-49.clicked  {
     background-color: burlywood;
     color: black;
 }
 
-/* .box-81 {
+.box-81 {
     width: calc(100% / 9);
     height: calc(100% / 9);
 
@@ -67,4 +67,4 @@ footer {
     align-items: center;
 
     cursor: pointer;
-} */
+}

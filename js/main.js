@@ -1,5 +1,18 @@
 // # FUNCTIONS
 
+function generateBombList(bombs, numberOfCell) {
+    let randomBombs = [];
+    
+    while (randomBombs.length < bombs) {
+        let number = Math.floor(Math.random() * numberOfCell + 1);
+    
+        if (!randomBombs.includes(number)) {
+            randomBombs.push(number);
+        }
+    }
+    return randomBombs;
+}
+
 // # Facile
 function gameGrid(container) {
     container.innerHTML = '';
@@ -8,6 +21,7 @@ function gameGrid(container) {
         const boxElement = gameBox(i);
         container.append(boxElement);
     }
+
 }
 
 function gameBox(text) {

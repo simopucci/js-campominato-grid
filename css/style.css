@@ -68,3 +68,8 @@ footer {
 
     cursor: pointer;
 }
+
+.failed {
+    background-color: rgb(200, 0, 0);
+    color: black;
+}
